@@ -12,118 +12,140 @@ html(lang="en")
         script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
-    nav.navbar.navbar-expand-lg.bg-dark.navbar-default
-        a.navbar-brand(href='/') Workers'
-        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-        #navbarText.collapse.navbar-collapse
-            ul.navbar-nav.mr-auto
-                li.nav-item.active
-                    a.nav-link(href='#') Home
-                li.nav-item.dropdown
-                    a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                        | About Us
-                    .dropdown-menu(aria-labelledby='navbarDropdown')
-                        a.dropdown-item(href="#") Equipments
-                        a.dropdown-item(href="#") Trainers
-                        a.dropdown-item(href="#") Group Class
-                        a.dropdown-item(href="#") Location
-                li.nav-item
-                    a.nav-link(href="#") News
-                li.nav-item
-                    a.nav-link(href="#") Shop
-                li.nav-item
-                    a.nav-link(href="#") Join Us
-                li.nav-item.dropdown
-                    a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                        | Membership
-                    .dropdown-menu(aria-labelledby='navbarDropdown')
-                        a.dropdown-item(href='#') My profile
-                        a.dropdown-item(href="#") Information
-                        a.dropdown-item(href="#") Invoice
-                        .dropdown-divider
-                        a.dropdown-item(href='#') Login
-                        a.dropdown-item(href='#') Sign up             
-    section#start.jumbotron.jumbotron-fluid.d-flex.mb-0
+        script(src="javascript/off-canvas.js")
+    nav.myNavbar.navbar-top
+        a.logo(href="#") Workers'
+        .menu
+            a.menu_list.actived(href="#") Home
+            a.menu_list(href="#") About Us
+            a.menu_list(href="#") News
+            a.menu_list(href="#") Shop
+            .dropdown.menu_list Membership
+                .dropdown-content
+                    a(href='#') Login
+                    a(href='#') Sign Up
+            a.menu_list(href="#") Join Us
+    //- nav.navbar.navbar-expand-md.bg-dark.navbar-default.p-3.px-5
+    //-     a.navbar-brand.mr-auto.pl-5(href='/') Workers'
+    //-     #mySidenav.sidenav
+    //-         a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+    //-         a(href='#') About
+    //-         a(href='#') Services
+    //-         a(href='#') Clients
+    //-         a(href='#') Contact
+    //-         // Use any element to open the sidenav
+    //-         span(onclick='openNav()') open
+    //-     #navbarText.collapse.navbar-collapse
+        
+    //-         ul.navbar-nav.ml-auto.pr-5
+    //-             li.nav-item.active
+    //-                 a.nav-link(href='#') Home
+    //-             li.nav-item.dropdown
+    //-                 a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    //-                     | About Us
+    //-                 .dropdown-menu(aria-labelledby='navbarDropdown')
+    //-                     a.dropdown-item(href="#") Equipments
+    //-                     a.dropdown-item(href="#") Trainers
+    //-                     a.dropdown-item(href="#") Group Class
+    //-                     a.dropdown-item(href="#") Location
+    //-             li.nav-item
+    //-                 a.nav-link(href="#") News
+    //-             li.nav-item
+    //-                 a.nav-link(href="#") Shop
+    //-             li.nav-item
+    //-                 a.nav-link(href="#") Join Us
+    //-             li.nav-item.dropdown
+    //-                 a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    //-                     | Membership
+    //-                 .dropdown-menu(aria-labelledby='navbarDropdown')
+    //-                     a.dropdown-item(href='#') My profile
+    //-                     a.dropdown-item(href="#") Information
+    //-                     a.dropdown-item(href="#") Invoice
+    //-                     .dropdown-divider
+    //-                     a.dropdown-item(href='#') Login
+    //-                     a.dropdown-item(href='#') Sign up             
+    section#start.jumbotron.jumbotron-fluid.d-flex.mb-0.p-0
+        video(src="source/video/1.mp4" autoplay loop muted)
         .container
-            h2 JOIN NOW
-            p Never too late
-            button(type="button").btn.btn-outline-light Get Started
-    section#about.container-fluid
-        .container
-            h1 Workers' Story
-            p Know more about us
-            button(type="button").btn.btn-outline-light About
-    section#news_location
-        .container
-            .row
-                .col-md-3
-                    .card(style='width: 100%')
-                        .card-body
-                            h5.card-title Lates News
-                            p.card-text
-                                | Some quick example text to build on the card title and make up the bulk of the card's content.
-                        ul.list-group.list-group-flush
-                            li.list-group-item Cras justo odio
-                            li.list-group-item Dapibus ac facilisis in
-                            li.list-group-item Vestibulum at eros
-                        .card-body
-                            a.card-link(href='#') Card link
-                            a.card-link(href='#') Another link
+            .contain
+                h1.slogen FITNESS MAKES YOU BETTER
+                    
+                button(type="button").btn.btn-outline-light START NOW
+    //- section#about.container-fluid.p-0
+    //-     .container
+    //-         h1 Workers' Story
+    //-         p Know more about us
+    //-         button(type="button").btn.btn-outline-light About
+    //- section#news_location
+    //-     .container
+    //-         .row
+    //-             .col-md-3
+    //-                 .card(style='width: 100%')
+    //-                     .card-body
+    //-                         h5.card-title Lates News
+    //-                         p.card-text
+    //-                             | Some quick example text to build on the card title and make up the bulk of the card's content.
+    //-                     ul.list-group.list-group-flush
+    //-                         li.list-group-item Cras justo odio
+    //-                         li.list-group-item Dapibus ac facilisis in
+    //-                         li.list-group-item Vestibulum at eros
+    //-                     .card-body
+    //-                         a.card-link(href='#') Card link
+    //-                         a.card-link(href='#') Another link
 
 
-                .col-md-9
-                    .card(style='width: 100%')
-                        img.card-img-top(src='...', alt='...')
-                        .card-body
-                            h5.card-title Find Workers'
-                            p.card-text
-                                | Some quick example text to build on the card title and make up the bulk of the card's content.
-                        ul.list-group.list-group-flush
-                            li.list-group-item Cras justo odio
-                            li.list-group-item Dapibus ac facilisis in
-                            li.list-group-item Vestibulum at eros
-                        .card-body
-                            a.card-link(href='#') Card link
-                            a.card-link(href='#') Another link
-    section#shop    
-        .container
-            h2 FEATURED MERCH AND WHEY
-            button(type="button").btn.btn-outline-light BROWSE THE SHOP 
+    //-             .col-md-9
+    //-                 .card(style='width: 100%')
+    //-                     img.card-img-top(src='...', alt='...')
+    //-                     .card-body
+    //-                         h5.card-title Find Workers'
+    //-                         p.card-text
+    //-                             | Some quick example text to build on the card title and make up the bulk of the card's content.
+    //-                     ul.list-group.list-group-flush
+    //-                         li.list-group-item Cras justo odio
+    //-                         li.list-group-item Dapibus ac facilisis in
+    //-                         li.list-group-item Vestibulum at eros
+    //-                     .card-body
+    //-                         a.card-link(href='#') Card link
+    //-                         a.card-link(href='#') Another link
+    //- section#shop    
+    //-     .container
+    //-         h2 FEATURED MERCH AND WHEY
+    //-         button(type="button").btn.btn-outline-light BROWSE THE SHOP 
 
-    footer
-        .container.d-flex.row
-            .col-md-8
-                section#footer_about 
-                    a(href="#") About
-                    a(href="#") Our Story
-                    a(href="#") Equipments
-                    a(href="#") Trainers
-                    a(href="#") Group Class
-                section#footer_more
-                    a(href="#") More
-                    a(href="#") Shop
-                    a(href="#") Location
-                    a(href="#") News
-                section#footer_mebership
-                    a(href="#") 
-            .col-md-4
-                section#footer_contact
-                    h3 email us
-                    input(type="email")
-                    button(type="button").btn.btn-outline-dark Send
-        .container.d-flex.row
-            .col-md-4
-                h3 Mobile App
-                img(src="#", alt="").android
-                img(src="#", alt="").ios
-            .col-md-4
-                a(href="#").fab.fa-facebook-f
-                a(href="#").fab.fa-twitter
-                a(href="#").fab.fa-instagram
-                a(href="#").fab.fa-youtube
-            .col-md-4
-                a(href="#") Careers
-        .container
-            p © 2020, Worker' Gym International, LLC. Website design and build by Chiudini
+    //- footer
+    //-     .container.d-flex.row
+    //-         .col-md-8
+    //-             section#footer_about 
+    //-                 a(href="#") About
+    //-                 a(href="#") Our Story
+    //-                 a(href="#") Equipments
+    //-                 a(href="#") Trainers
+    //-                 a(href="#") Group Class
+    //-             section#footer_more
+    //-                 a(href="#") More
+    //-                 a(href="#") Shop
+    //-                 a(href="#") Location
+    //-                 a(href="#") News
+    //-             section#footer_mebership
+    //-                 a(href="#") 
+    //-         .col-md-4
+    //-             section#footer_contact
+    //-                 h3 email us
+    //-                 input(type="email")
+    //-                 button(type="button").btn.btn-outline-dark Send
+    //-     .container.d-flex.row
+    //-         .col-md-4
+    //-             h3 Mobile App
+    //-             img(src="#", alt="").android
+    //-             img(src="#", alt="").ios
+    //-         .col-md-4
+    //-             a(href="#").fab.fa-facebook-f
+    //-             a(href="#").fab.fa-twitter
+    //-             a(href="#").fab.fa-instagram
+    //-             a(href="#").fab.fa-youtube
+    //-         .col-md-4
+    //-             a(href="#") Careers
+    //-     .container
+    //-         p © 2020, Worker' Gym International, LLC. Website design and build by Chiudini
         

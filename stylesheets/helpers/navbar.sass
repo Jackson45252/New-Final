@@ -1,119 +1,226 @@
-$bgDefault      : #2b2b28
-$bgHighlight    : transparent
-$colDefault     : #f8f8f8
-$colHighlight   : #e3b04b
-$hoverHighlight : #f1d6ab
-$dropDown       : true
-.navbar
-  background-color: $bgDefault
-  .navbar-brand
-    color: $colDefault
-    &:hover
-        color: $hoverHighlight
-    &:focus
-      color: $colHighlight
-  .navbar-text
-    color: $colDefault
-    a 
-      color: $colHighlight
-      &:hover
-          color: $hoverHighlight
-      &:focus
-        color: $colHighlight
-  .navbar-nav
-    .nav-link
-      color: $colDefault
-      border-radius: .25rem
-      margin: 0 0.25em
-      &:not(.disabled)
+// $bgDefault      : #2b2b28
+// $bgHighlight    : transparent
+// $colDefault     : #f8f8f8
+// $colHighlight   : #e3b04b
+// $hoverHighlight : #f1d6ab
+// $dropDown       : true
+// .navbar
+//   background-color: $bgDefault
+//   .navbar-brand
+//     color: $colDefault
+//     &:hover
+//         color: $hoverHighlight
+//     &:focus
+//       color: $colHighlight
+//   .navbar-text
+//     color: $colDefault
+//     a 
+//       color: $colHighlight
+//       &:hover
+//           color: $hoverHighlight
+//       &:focus
+//         color: $colHighlight
+//   .navbar-nav
+//     .nav-link
+//       color: $colDefault
+//       border-radius: .25rem
+//       margin: 0 0.25em
+//       &:not(.disabled)
+//         &:hover
+//             color: $hoverHighlight
+//         &:focus
+//           color: $colHighlight
+//     @if $dropDown
+//       .dropdown-menu
+//         background-color: $bgDefault
+//         border-color: $bgHighlight
+//         .dropdown-item
+//           color: $colDefault
+//           &:hover
+//             color: $hoverHighlight
+//             background-color: $bgHighlight
+//           &:focus, &.active
+//             color: $colHighlight
+//             background-color: $bgHighlight
+//         .dropdown-divider
+//           border-top-color: $bgHighlight
+//     .nav-item.active, .nav-item.show
+//       .nav-link, .nav-link:hover, .nav-link:focus
+//         color: $colHighlight
+//         background-color: $bgHighlight
+//   .navbar-toggle
+//     border-color: $bgHighlight
+//     &:hover 
+//         color: $hoverHighlight
+//     &:focus
+//       background-color: $bgHighlight
+//     .navbar-toggler-icon
+//       color: $colDefault
+//   .navbar-collapse,
+//   .navbar-form
+//     border-color: $colDefault
+//   .navbar-link
+//     color: $colDefault
+//     &:hover
+//       color: $hoverHighlight
+// @media (max-width: 575px)
+//   .navbar-expend-sm .navbar-nav .show .dropdown-menu
+//     .dropdown-item
+//       color: $colDefault
+//       &:hover 
+//           color: $hoverHighlight
+//       &:focus
+//         color: $colHighlight
+//     .dropdown-item.active
+//       color: $colHighlight
+//       background-color: $bgHighlight
+// @media (max-width: 767px)
+//   .navbar-expend-md .navbar-nav .show .dropdown-menu
+//     .dropdown-item
+//       color: $colDefault
+//       &:hover 
+//           color: $hoverHighlight
+//       &:focus
+//         color: $colHighlight
+//     .dropdown-item.active
+//       color: $colHighlight
+//       background-color: $bgHighlight
+// @media (max-width: 991px)
+//   .navbar-expend-lg .navbar-nav .show .dropdown-menu
+//     .dropdown-item
+//       color: $colDefault
+//       &:hover 
+//           color: $hoverHighlight
+//       &:focus
+//         color: $colHighlight
+//     .dropdown-item.active
+//       color: $colHighlight
+//       background-color: $bgHighlight
+// @media (max-width: 1199px)
+//   .navbar-expend-xl .navbar-nav .show .dropdown-menu
+//     .dropdown-item
+//       color: $colDefault
+//       &:hover 
+//           color: $hoverHighlight
+//     &:focus
+//         color: $colHighlight
+//     .dropdown-item.active
+//       color: $colHighlight
+//       background-color: $bgHighlight
+// .navbar-expend .navbar-nav .show .dropdown-menu
+//   .dropdown-item
+//     color: $colDefault
+//     &:hover 
+//         color: $hoverHighlight
+//     &:focus
+//       color: $colHighlight
+//   .dropdown-item.active
+//     color: $colHighlight
+//     background-color: $bgHighlight
+$color_white: #f8f8f8
+$color_black: #2b2b28
+$color_orange: #e3b04b
+$color_ltOrange: #f1d6ab
+*
+  position: relative
+  // border: 1px solid #41d6ab
+
+
+
+nav a
+  color: $color_white
+  &:hover
+    color: $color_orange
+    text-decoration: none
+
+nav.myNavbar
+    background-color: $color_black
+    padding: 30px 150px
+    display: flex
+    width: 100%
+    position: fixed
+    z-index: 20
+    justify-content: space-between
+    transition-duration: 0.5s
+    .logo
+      font-size: 30px
+      align-self: center
+    .menu
+      align-self: center
+      display: inline-flex
+      
+      .menu_list
+        box-sizing: border-box
+        color: $color_white
+        font-size: 18px
+        padding: 10px 30px
+        // margin-left: 40px
+        border-bottom: 1.5px solid $color_black
+        &:hover 
+          color: $color_ltOrange
+      a.actived
+        border-bottom: 1.5px solid $color_orange
+        color: $color_orange
+        cursor: default
+        font-weight: bold
+
+     
+
+
+
+/* The container <div> - needed to position the dropdown content
+
+.dropdown
+    position: relative
+    display: inline-block
+    
+/* Dropdown Content (Hidden by Default)
+
+.dropdown-content
+    display: none
+    position: absolute
+    background-color: $color_white
+    width: 100%
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+    z-index: 1
+    margin-left: -30px
+    margin-top: 11.5px
+    // margin-left: 20px
+   
+    a
+        color: $color_black
+        padding: 12px 30px
+        text-decoration: none
+        display: block
+        border-left: 1.5px solid $color_white
+        border-right: 1.5px solid $color_white
         &:hover
-            color: $hoverHighlight
-        &:focus
-          color: $colHighlight
-    @if $dropDown
-      .dropdown-menu
-        background-color: $bgDefault
-        border-color: $bgHighlight
-        .dropdown-item
-          color: $colDefault
-          &:hover
-            color: $hoverHighlight
-            background-color: $bgHighlight
-          &:focus, &.active
-            color: $colHighlight
-            background-color: $bgHighlight
-        .dropdown-divider
-          border-top-color: $bgHighlight
-    .nav-item.active, .nav-item.show
-      .nav-link, .nav-link:hover, .nav-link:focus
-        color: $colHighlight
-        background-color: $bgHighlight
-  .navbar-toggle
-    border-color: $bgHighlight
-    &:hover 
-        color: $hoverHighlight
-    &:focus
-      background-color: $bgHighlight
-    .navbar-toggler-icon
-      color: $colDefault
-  .navbar-collapse,
-  .navbar-form
-    border-color: $colDefault
-  .navbar-link
-    color: $colDefault
-    &:hover
-      color: $hoverHighlight
-@media (max-width: 575px)
-  .navbar-expend-sm .navbar-nav .show .dropdown-menu
-    .dropdown-item
-      color: $colDefault
-      &:hover 
-          color: $hoverHighlight
-      &:focus
-        color: $colHighlight
-    .dropdown-item.active
-      color: $colHighlight
-      background-color: $bgHighlight
-@media (max-width: 767px)
-  .navbar-expend-md .navbar-nav .show .dropdown-menu
-    .dropdown-item
-      color: $colDefault
-      &:hover 
-          color: $hoverHighlight
-      &:focus
-        color: $colHighlight
-    .dropdown-item.active
-      color: $colHighlight
-      background-color: $bgHighlight
-@media (max-width: 991px)
-  .navbar-expend-lg .navbar-nav .show .dropdown-menu
-    .dropdown-item
-      color: $colDefault
-      &:hover 
-          color: $hoverHighlight
-      &:focus
-        color: $colHighlight
-    .dropdown-item.active
-      color: $colHighlight
-      background-color: $bgHighlight
-@media (max-width: 1199px)
-  .navbar-expend-xl .navbar-nav .show .dropdown-menu
-    .dropdown-item
-      color: $colDefault
-      &:hover 
-          color: $hoverHighlight
-    &:focus
-        color: $colHighlight
-    .dropdown-item.active
-      color: $colHighlight
-      background-color: $bgHighlight
-.navbar-expend .navbar-nav .show .dropdown-menu
-  .dropdown-item
-    color: $colDefault
-    &:hover 
-        color: $hoverHighlight
-    &:focus
-      color: $colHighlight
-  .dropdown-item.active
-    color: $colHighlight
-    background-color: $bgHighlight
+          background-color: $color_orange
+          color: $color_white
+          border-left: 1.5px solid $color_orange
+          border-right: 1.5px solid $color_orange
+
+/* Links inside the dropdown
+
+/* Change color of dropdown links on hover
+
+/* Show the dropdown menu on hover
+
+.dropdown:hover
+  .dropdown-content
+    display: block
+
+/* Change the background color of the dropdown button when the dropdown content is shown
+
+nav.myNavbar.navbar-top
+  background-color: transparent
+  .logo
+  .menu
+    .menu_list
+      border: 1.5px solid transparent
+      
+      &:hover
+        border: 1.5px solid $color_white
+    a.menu_list.actived
+      &:hover
+        color: $color_orange

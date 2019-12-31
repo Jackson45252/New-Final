@@ -3,11 +3,47 @@
 @import "../node_modules/bootstrap/scss/functions"
 @import "helpers/variables"
 @import "helpers/navbar.sass"
+@import "helpers/off-canvas.sass"
+
 @import "../node_modules/bootstrap/scss/bootstrap"
 
 
 
 
-
+@mixin center
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    
+* 
 section#start
-    background-color: pink
+    // background-color: pink
+    height: 100vh
+    background-position: center 
+    background-size: cover
+    overflow: hidden
+    padding: 0px
+    position: relative
+    video
+        height: 1100px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+        
+    .container
+        z-index: 2
+        .contain
+            width: 100%
+           
+            +center
+            text-align: center
+            color: $color_white
+            .slogen
+                font-size: 70px
+                font-weight: bold
+            button
+                margin-top:  20px
+                font-size: 25px
+                padding: 10px 20px

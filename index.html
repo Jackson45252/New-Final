@@ -12,104 +12,22 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="javascript/off-canvas.js"></script>
   </head>
-  <nav class="navbar navbar-expand-lg bg-dark navbar-default"><a class="navbar-brand" href="/">Workers'</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Equipments</a><a class="dropdown-item" href="#">Trainers</a><a class="dropdown-item" href="#">Group Class</a><a class="dropdown-item" href="#">Location</a></div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Join Us</a></li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Membership</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">My profile</a><a class="dropdown-item" href="#">Information</a><a class="dropdown-item" href="#">Invoice</a>
-            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Login</a><a class="dropdown-item" href="#">Sign up             </a>
-          </div>
-        </li>
-      </ul>
+  <nav class="myNavbar navbar-top"><a class="logo" href="#">Workers'</a>
+    <div class="menu"><a class="menu_list actived" href="#">Home</a><a class="menu_list" href="#">About Us</a><a class="menu_list" href="#">News</a><a class="menu_list" href="#">Shop</a>
+      <div class="dropdown menu_list">Membership
+        <div class="dropdown-content"><a href="#">Login</a><a href="#">Sign Up</a></div>
+      </div><a class="menu_list" href="#">Join Us</a>
     </div>
   </nav>
-  <section class="jumbotron jumbotron-fluid d-flex mb-0" id="start">
+  <section class="jumbotron jumbotron-fluid d-flex mb-0 p-0" id="start">
+    <video src="source/video/1.mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
     <div class="container">
-      <h2>JOIN NOW</h2>
-      <p>Never too late</p>
-      <button class="btn btn-outline-light" type="button">Get Started</button>
-    </div>
-  </section>
-  <section class="container-fluid" id="about">
-    <div class="container">
-      <h1>Workers' Story</h1>
-      <p>Know more about us</p>
-      <button class="btn btn-outline-light" type="button">About</button>
-    </div>
-  </section>
-  <section id="news_location">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <h5 class="card-title">Lates News</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <div class="card-body"><a class="card-link" href="#">Card link</a><a class="card-link" href="#">Another link</a></div>
-          </div>
-        </div>
-        <div class="col-md-9">
-          <div class="card" style="width: 100%"><img class="card-img-top" src="..." alt="..."/>
-            <div class="card-body">
-              <h5 class="card-title">Find Workers'</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <div class="card-body"><a class="card-link" href="#">Card link</a><a class="card-link" href="#">Another link</a></div>
-          </div>
-        </div>
+      <div class="contain">
+        <h1 class="slogen">FITNESS MAKES YOU BETTER</h1>
+        <button class="btn btn-outline-light" type="button">START NOW</button>
       </div>
     </div>
   </section>
-  <section id="shop">   
-    <div class="container">
-      <h2>FEATURED MERCH AND WHEY</h2>
-      <button class="btn btn-outline-light" type="button">BROWSE THE SHOP </button>
-    </div>
-  </section>
-  <footer>
-    <div class="container d-flex row">
-      <div class="col-md-8">
-        <section id="footer_about"> <a href="#">About</a><a href="#">Our Story</a><a href="#">Equipments</a><a href="#">Trainers</a><a href="#">Group Class</a></section>
-        <section id="footer_more"><a href="#">More</a><a href="#">Shop</a><a href="#">Location</a><a href="#">News</a></section>
-        <section id="footer_mebership"><a href="#"> </a></section>
-      </div>
-      <div class="col-md-4">
-        <section id="footer_contact">
-          <h3>email us</h3>
-          <input type="email"/>
-          <button class="btn btn-outline-dark" type="button">Send</button>
-        </section>
-      </div>
-    </div>
-    <div class="container d-flex row">
-      <div class="col-md-4">
-        <h3>Mobile App</h3><img class="android" src="#" alt=""/><img class="ios" src="#" alt=""/>
-      </div>
-      <div class="col-md-4"><a class="fab fa-facebook-f" href="#"></a><a class="fab fa-twitter" href="#"></a><a class="fab fa-instagram" href="#"></a><a class="fab fa-youtube" href="#"></a></div>
-      <div class="col-md-4"><a href="#">Careers</a></div>
-    </div>
-    <div class="container">
-      <p>© 2020, Worker' Gym International, LLC. Website design and build by Chiudini</p>
-    </div>
-  </footer>
 </html>

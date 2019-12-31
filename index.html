@@ -15,7 +15,10 @@
     <script src="javascript/off-canvas.js"></script>
   </head>
   <nav class="myNavbar navbar-top"><a class="logo" href="#">Workers'</a>
-    <div class="menu"><a class="menu_list actived" href="#">Home</a><a class="menu_list" href="#">About Us</a><a class="menu_list" href="#">News</a><a class="menu_list" href="#">Shop</a>
+    <div class="menu"><a class="menu_list actived" href="#">Home</a>
+      <div class="dropdown menu_list">About Us
+        <div class="dropdown-content"><a href="#">Classes</a><a href="#">Locataions</a><a href="#">Trainers</a></div>
+      </div><a class="menu_list" href="#">News</a><a class="menu_list" href="#">Shop</a>
       <div class="dropdown menu_list">Membership
         <div class="dropdown-content"><a href="#">Login</a><a href="#">Sign Up</a></div>
       </div><a class="menu_list" href="#">Join Us</a>
@@ -26,8 +29,37 @@
     <div class="container">
       <div class="contain">
         <h1 class="slogen">FITNESS MAKES YOU BETTER</h1>
-        <button class="btn btn-outline-light" type="button">START NOW</button>
+        <button class="btn btn-outline-light" type="button">START NOW</button><a class="fas fa-chevron-down" href="#about"></a>
       </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="container">
+      <h2>WE HAVE WHAT YOU NEED</h2>
+      <div class="line"></div>
+      <p>Whether you’re just starting out or an old hand, you’ll find what you need for your fitness journey.</p>
+      <div class="row"><a class="col-md-4" href="#">
+          <div class="about">
+            <h3>CLASSES</h3>
+            <div class="description">
+              <div class="title">CLASSES</div>
+              <p> If you love the energy of group workouts, we have a class that’ll fit you.</p><span>Explore More</span>
+            </div>
+          </div></a><a class="col-md-4" href="#">
+          <div class="about">
+            <h3>Locations</h3>
+            <div class="description">
+              <div class="title">Locations</div>
+              <p> Our clubs have cutting-edge fitness equipment to take your workout to the next level. </p><span>Explore More</span>
+            </div>
+          </div></a><a class="col-md-4" href="#">
+          <div class="about">
+            <h3>Trainers</h3>
+            <div class="description">
+              <div class="title">Trainers</div>
+              <p> Surpass your fitness goals with our expert trainers’ help and make you better.</p><span>Explore More</span>
+            </div>
+          </div></a></div>
     </div>
   </section>
 </html>

@@ -1,4 +1,7 @@
-
+$color_white: #f8f8f8
+$color_black: #2b2b28
+$color_orange: #e3b04b
+$color_ltOrange: #f1d6ab
 
 @import "../node_modules/bootstrap/scss/functions"
 @import "helpers/variables"
@@ -47,3 +50,67 @@ section#start
                 margin-top:  20px
                 font-size: 25px
                 padding: 10px 20px
+                &:hover
+                    background-color: $color_orange
+                    border: 1px solid $color_orange
+            a
+                display: block
+                font-size: 40px
+                color: rgba(248,248,248,0.5)
+                text-decoration: none
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                top: 380px
+                &:hover
+                    color: $color_white
+                    transition: 0.3s
+section#about
+    height: calc(100vh - 107.9px)
+    color: $color_black
+    text-align: center   
+    padding-top: 40px
+    
+    .container  
+        .line
+            width: 35px
+            height: 4px
+            margin: 20px 0px
+            background-color: $color_orange
+            left: 50%
+            transform: translateX(-50%)
+    .row
+        width: 100%
+        
+        .col-md-4
+            padding: 5px
+            
+            .about
+                background-color: $color_orange
+                height: 400px
+                transform: skewX(-10deg)
+                h3
+                    +center
+                    color: $color_white
+                .description
+                    width: 100%
+                    padding: 10px
+                    color: transparent
+                    +center
+                    .title
+                        font-size: 30px
+                        font-weight: bold
+                    
+            &:hover
+                .about
+                    
+                    
+                    h3
+                        color: transparent
+                    .description
+                        color: $color_white
+                        
+                        p
+                            font-size: 20px
+                    
+                        

@@ -117,10 +117,7 @@
 //   .dropdown-item.active
 //     color: $colHighlight
 //     background-color: $bgHighlight
-$color_white: #f8f8f8
-$color_black: #2b2b28
-$color_orange: #e3b04b
-$color_ltOrange: #f1d6ab
+
 *
   position: relative
   // border: 1px solid #41d6ab
@@ -156,6 +153,7 @@ nav.myNavbar
         padding: 10px 30px
         // margin-left: 40px
         border-bottom: 1.5px solid $color_black
+        box-sizing: border-box
         &:hover 
           color: $color_ltOrange
       a.actived
@@ -180,7 +178,7 @@ nav.myNavbar
     display: none
     position: absolute
     background-color: $color_white
-    width: 100%
+    min-width: 100%
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
     z-index: 1
     margin-left: -30px
@@ -192,13 +190,11 @@ nav.myNavbar
         padding: 12px 30px
         text-decoration: none
         display: block
-        border-left: 1.5px solid $color_white
-        border-right: 1.5px solid $color_white
+        
         &:hover
           background-color: $color_orange
           color: $color_white
-          border-left: 1.5px solid $color_orange
-          border-right: 1.5px solid $color_orange
+          
 
 /* Links inside the dropdown
 

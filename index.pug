@@ -17,7 +17,11 @@ html(lang="en")
         a.logo(href="#") Workers'
         .menu
             a.menu_list.actived(href="#") Home
-            a.menu_list(href="#") About Us
+            .dropdown.menu_list About Us
+                .dropdown-content
+                    a(href="#") Classes
+                    a(href="#") Locataions
+                    a(href="#") Trainers
             a.menu_list(href="#") News
             a.menu_list(href="#") Shop
             .dropdown.menu_list Membership
@@ -71,11 +75,36 @@ html(lang="en")
                 h1.slogen FITNESS MAKES YOU BETTER
                     
                 button(type="button").btn.btn-outline-light START NOW
-    //- section#about.container-fluid.p-0
-    //-     .container
-    //-         h1 Workers' Story
-    //-         p Know more about us
-    //-         button(type="button").btn.btn-outline-light About
+                a(href="#about").fas.fa-chevron-down
+    section#about
+        
+        .container
+            h2 WE HAVE WHAT YOU NEED
+            .line
+            p Whether you’re just starting out or an old hand, you’ll find what you need for your fitness journey.
+            .row
+                a(href="#").col-md-4
+                    .about
+                        h3 CLASSES
+                        .description
+                            .title CLASSES
+                            p  If you love the energy of group workouts, we have a class that’ll fit you.
+                            span Explore More
+                a(href="#").col-md-4
+                    .about
+                        h3 Locations
+                        .description
+                            .title Locations
+                            p  Our clubs have cutting-edge fitness equipment to take your workout to the next level. 
+                            span Explore More
+                a(href="#").col-md-4
+                    .about
+                        h3 Trainers
+                        .description
+                            .title Trainers
+                            p  Surpass your fitness goals with our expert trainers’ help and make you better.
+                            span Explore More
+            
     //- section#news_location
     //-     .container
     //-         .row

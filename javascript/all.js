@@ -24,7 +24,7 @@ $(window).ready(function () {
 $(document).on("click",'.fas',function(e){
   e.preventDefault();
   let target=$('.fas').attr('href');
-  console.log(alert(target));
+  // console.log(alert(target));
   $('html,body').animate({
     scrollTop: $(target).offset().top - 107.9
   },500);

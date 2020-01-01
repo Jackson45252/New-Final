@@ -14,7 +14,6 @@
 
 
 $(document).ready(function(){
-  
   $(window).scroll(function(e){
     if ($(window).scrollTop()>0)
       $(".myNavbar").removeClass("navbar-top");
@@ -31,7 +30,6 @@ $(document).ready(function(){
     },500);
   });
   $(window).stellar();
-
 })
 
 

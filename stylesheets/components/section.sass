@@ -1,0 +1,164 @@
+section#start
+    height: 800px
+    background-position: center 
+    background-size: cover
+    overflow: hidden
+    padding: 0px
+    position: relative
+    video
+        width: 130%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+        
+    .container
+        z-index: 2
+        .contain
+            width: 100%
+           
+            +center
+            text-align: center
+            color: $color_white
+            .slogen
+                font-size: 70px
+                font-weight: bold
+            button
+                margin-top:  20px
+                font-size: 25px
+                padding: 10px 20px
+                &:hover
+                    background-color: $color_orange
+                    border: 1px solid $color_orange
+            a
+                display: block
+                font-size: 40px
+                color: rgba(248,248,248,0.5)
+                text-decoration: none
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                top: 380px
+                &:hover
+                    color: $color_white
+                    transition: 0.3s
+section#about
+    color: $color_black
+    text-align: center   
+    .container 
+        margin: 60px 0px
+        left: 50%
+        transform: translateX(-50%)
+        .line
+            width: 35px
+            height: 4px
+            margin: 20px 0px
+            background-color: $color_orange
+            left: 50%
+            transform: translateX(-50%)
+        .skew
+            display: flex
+            width: 100%
+            height: 430px
+            justify-content: center
+            text-align: center
+            align-items: center
+            
+            a.about
+                width: 30%
+                height: 380px
+                margin: 0px 5px
+                text-decoration: none
+                transition: 0.3s
+                transform: skew(-10deg)
+                color: $color-white
+                overflow: hidden
+                h3
+                    +center
+                    font-size: 50px
+                .description
+                    width: 100%
+                    height: 100%
+                    color: transparent
+                    .wrap
+                        width: 80%
+                        +center
+                        .title
+                            font-size: 40px
+                            font-weight: bold
+                        span
+                            font-weight: bold
+                img
+                    height: 100%
+                    z-index: -1
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                .class-img
+                    transform: skew(10deg) translate(-45%, -50%)
+                .location-img
+                    transform: skew(10deg) translate(-40%, -50%)
+                .trainers-img
+                    transform: skew(10deg) translate(-51%, -50%)
+                
+                &:hover
+                    width: 35%
+                    height: 430px
+                    transition: 0.3s
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3)
+                    h3
+                        color: transparent
+                        transition: 0.3s
+                    .description
+                        color: $color_white
+                        transition: 0.3s
+                        transition-delay: 0.2s
+                        background-color: rgba(227, 176, 75,0.8)
+.bgimg
+    height: 500px
+    background: transparent
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+    &:before
+        content: ""
+        background-color: rgba(0,0,0,0.4)
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        z-index: 1
+    .container
+        color: $color_white
+        z-index: 2
+        text-align: center
+        +center
+        display: flex
+        justify-content: center
+        .description
+            width: 554px
+            h2
+                font-size: 50px
+                font-weight: bold
+            p
+                font-size: 30px
+
+section#newsNshop
+    z-index: -1
+    .container
+        margin: 60px 0px
+        left: 50%
+        transform: translateX(-50%)
+        h2,p
+            text-align: center
+        .line
+            width: 35px
+            height: 4px
+            margin: 20px 0px
+            background-color: $color_orange
+            left: 50%
+            transform: translateX(-50%)
+        .row
+            .card
+                background-color: $color_white

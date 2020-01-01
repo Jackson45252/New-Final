@@ -26,7 +26,7 @@ $(document).ready(function(){
     let target=$('.fas').attr('href');
     // console.log(alert(target));
     $('html,body').animate({
-      scrollTop: $(target).offset().top - 140
+      scrollTop: $(target).offset().top - 85
     },500);
   });
   $(window).stellar();

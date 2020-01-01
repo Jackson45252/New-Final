@@ -21,15 +21,14 @@ $color_ltOrange: #f1d6ab
     
 * 
 section#start
-    // background-color: pink
-    height: 100vh
+    height: 800px
     background-position: center 
     background-size: cover
     overflow: hidden
     padding: 0px
     position: relative
     video
-        height: 130vh
+        width: 130%
         position: absolute
         top: 50%
         left: 50%
@@ -66,11 +65,12 @@ section#start
                     color: $color_white
                     transition: 0.3s
 section#about
-    height: calc(100vh - 107.9px)
     color: $color_black
     text-align: center   
-    .container  
-        +center
+    .container 
+        margin: 60px 0px
+        left: 50%
+        transform: translateX(-50%)
         .line
             width: 35px
             height: 4px
@@ -81,14 +81,14 @@ section#about
         .skew
             display: flex
             width: 100%
-            height: 400px
+            height: 430px
             justify-content: center
             text-align: center
             align-items: center
             
             a.about
                 width: 30%
-                height: 350px
+                height: 380px
                 margin: 0px 5px
                 text-decoration: none
                 transition: 0.3s
@@ -125,8 +125,9 @@ section#about
                 
                 &:hover
                     width: 35%
-                    height: 400px
+                    height: 430px
                     transition: 0.3s
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3)
                     h3
                         color: transparent
                         transition: 0.3s
@@ -135,42 +136,53 @@ section#about
                         transition: 0.3s
                         transition-delay: 0.2s
                         background-color: rgba(227, 176, 75,0.8)
-section#newsNshop
-    height: calc(100vh - 107.9px)
+.bgimg
+    height: 500px
+    background: transparent
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+    &:before
+        content: ""
+        background-color: rgba(0,0,0,0.4)
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        z-index: 1
+    .container
+        color: $color_white
+        z-index: 2
+        text-align: center
+        +center
+        display: flex
+        justify-content: center
+        .description
+            width: 554px
+            h2
+                font-size: 50px
+                font-weight: bold
+            p
+                font-size: 30px
 
-    // .row
-    //     width: 100%
-        
-    //     .col-md-4
-    //         padding: 5px
-            
-    //         .about
-    //             background-color: $color_orange
-    //             height: 400px
-    //             transform: skewX(-10deg)
-    //             h3
-    //                 +center
-    //                 color: $color_white
-    //             .description
-    //                 width: 100%
-    //                 padding: 10px
-    //                 color: transparent
-    //                 +center
-    //                 .title
-    //                     font-size: 30px
-    //                     font-weight: bold
-                    
-    //         &:hover
-    //             .about
-    //                 width: 105%
-    //                 height: 105%
-                    
-    //                 h3
-    //                     color: transparent
-    //                 .description
-    //                     color: $color_white
-                        
-    //                     p
-    //                         font-size: 20px
-                    
+section#newsNshop
+    z-index: -1
+    .container
+        margin: 60px 0px
+        left: 50%
+        transform: translateX(-50%)
+        h2,p
+            text-align: center
+        .line
+            width: 35px
+            height: 4px
+            margin: 20px 0px
+            background-color: $color_orange
+            left: 50%
+            transform: translateX(-50%)
+        .row
+            .card
+                background-color: $color_white
+
                         

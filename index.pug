@@ -9,85 +9,119 @@ html(lang="en")
         link(rel='stylesheet' href='stylesheets/all.css')
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css")
         link(href='https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional' rel='stylesheet')
-        script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+    body    
+        nav.myNavbar.navbar-top
+            a.logo(href="#") Workers'
+            .menu
+                a.menu_list.actived(href="#") Home
+                .dropdown.menu_list About Us
+                    .dropdown-content
+                        a(href="#") Classes
+                        a(href="#") Locations
+                        a(href="#") Trainers
+                a.menu_list(href="#") News
+                a.menu_list(href="#") Shop
+                .dropdown.menu_list Membership
+                    .dropdown-content
+                        a(href='#') Login
+                        a(href='#') Sign Up
+                a.menu_list(href="#") Join Us
+    
+        section#start.jumbotron.jumbotron-fluid.d-flex.mb-0.p-0
+            video(src="source/video/1.mp4" autoplay loop muted)
+            .container
+                .contain
+                    h1.slogen FITNESS MAKES YOU BETTER
+                        
+                    button(type="button").btn.btn-outline-light FREE TRIAL
+                    a.fas.fa-chevron-down(href="#about")
+
+        section#about
+            .container
+                h2 WE HAVE WHAT YOU NEED
+                .line
+                p Whether you’re just starting out or an old hand, you’ll find what you need for your fitness journey.
+                .skew
+                    a.about(href="#")
+                        h3 CLASSES
+                        .description
+                            .wrap
+                                .title CLASSES
+                                p  If you love the energy of group workouts, we have a class that’ll fit you.
+                                span Explore More
+                        img.class-img(src="source/img/index-class.jpg", alt="")
+                        
+                    a.about(href="#")
+                        h3 Locations
+                        .description
+                            .wrap
+                                .title Locations
+                                p  Our clubs have cutting-edge fitness equipment to take your workout to the next level. 
+                                span Explore More
+                        img.location-img(src="source/img/index-location.jpg", alt="")
+                        
+                    a.about(href="#")
+                        h3 Trainers
+                        .description
+                            .wrap
+                                .title Trainers
+                                p  Surpass your fitness goals with our expert trainers’ help and make you better.
+                                span Explore More
+                        img.trainers-img(src="source/img/index-trainers.jpg", alt="")
+
+                        
+        .bgimg(style="background-image: url('source/img/index-bg-1.jpg')" ,data-stellar-background-ratio="0.5")  
+            .container
+                .description
+                    h2  CHANGE IS STRONG
+                    p THINK TRAINING'S HARD? TRY LOSING. 
+                        
+        section#newsNshop
+            .container
+                h2 YOU MIGHT WANNA KNOW
+                .line
+                p Whether you’re just starting out or an old hand, you’ll find what you need for your fitness journey.
+                .row
+                    .col-md-5
+                        .card(style='width: 100%')
+                            .card-body
+                                h5.card-title Lates News
+                                p.cart-text
+                                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+                            ul.list-group.list-group-flush
+                                li.list-group-item Cras justo odio
+                                li.list-group-item Dapibus ac facilisis in
+                                li.list-group-item Vestibulum at eros
+                            .card-body
+                                a.card-link(href='#') Card link
+                                a.card-link(href='#') Another link
+                    .col-md-7
+                        .card(style='width: 100%')
+                            .card-body
+                                h5.card-title Shop
+                                p.cart-text
+                                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+                            ul.list-group.list-group-flush
+                                li.list-group-item Cras justo odio
+                                li.list-group-item Dapibus ac facilisis in
+                                li.list-group-item Vestibulum at eros
+                            .card-body
+                                a.card-link(href='#') Card link
+                                a.card-link(href='#') Another link
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+        script(scr="javascript/stellar.min.js")
+        script(src="javascript/all.js")
         script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
-        script(src="javascript/all.js")
-    nav.myNavbar.navbar-top
-        a.logo(href="#") Workers'
-        .menu
-            a.menu_list.actived(href="#") Home
-            .dropdown.menu_list About Us
-                .dropdown-content
-                    a(href="#") Classes
-                    a(href="#") Locations
-                    a(href="#") Trainers
-            a.menu_list(href="#") News
-            a.menu_list(href="#") Shop
-            .dropdown.menu_list Membership
-                .dropdown-content
-                    a(href='#') Login
-                    a(href='#') Sign Up
-            a.menu_list(href="#") Join Us
-   
-    section#start.jumbotron.jumbotron-fluid.d-flex.mb-0.p-0
-        video(src="source/video/1.mp4" autoplay loop muted)
-        .container
-            .contain
-                h1.slogen FITNESS MAKES YOU BETTER
-                    
-                button(type="button").btn.btn-outline-light START NOW
-                a.fas.fa-chevron-down(href="#about")
+        
+        
 
-    section#about
-        .container
-            h2 WE HAVE WHAT YOU NEED
-            .line
-            p Whether you’re just starting out or an old hand, you’ll find what you need for your fitness journey.
-            .skew
-                a.about(href="#")
-                    h3 CLASSES
-                    .description
-                        .wrap
-                            .title CLASSES
-                            p  If you love the energy of group workouts, we have a class that’ll fit you.
-                            span Explore More
-                    img.class-img(src="source/img/index-class.jpg", alt="")
-                    
-                a.about(href="#")
-                    h3 Locations
-                    .description
-                        .wrap
-                            .title Locations
-                            p  Our clubs have cutting-edge fitness equipment to take your workout to the next level. 
-                            span Explore More
-                    img.location-img(src="source/img/index-location.jpg", alt="")
-                    
-                a.about(href="#")
-                    h3 Trainers
-                    .description
-                        .wrap
-                            .title Trainers
-                            p  Surpass your fitness goals with our expert trainers’ help and make you better.
-                            span Explore More
-                    img.trainers-img(src="source/img/index-trainers.jpg", alt="")
-                    
-    section#newsNshop
-        .container
-            .row
-                .col-md-3
-                    .card(style='width: 100%')
-                        .card-body
-                            h5.card-title Lates News
-                            p.cart-text
-                                | Some quick example text to build on the card title and make up the bulk of the card's content.
-                        ul.list-group.list-group-flush
-                            li.list-group-item Cras justo odio
-                            li.list-group-item Dapibus ac facilisis in
-                            li.list-group-item Vestibulum at eros
-                        .card-body
-                            a.card-link(href='#') Card link
-                            a.card-link(href='#') Another link
+
+
+
+
+
 
 
 

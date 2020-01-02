@@ -14,6 +14,12 @@
 
 
 $(document).ready(function(){
+  $('.bgimg').parallax({
+    imageSrc: 'source/img/index-bg-1.jpg',
+    positionY: "-700px",
+    speed: 0.3
+  });
+  jQuery(window).trigger('resize').trigger('scroll');
   $(window).scroll(function(e){
     if ($(window).scrollTop()>0)
       $(".myNavbar").removeClass("navbar-top");
@@ -26,10 +32,10 @@ $(document).ready(function(){
     let target=$('.fas').attr('href');
     // console.log(alert(target));
     $('html,body').animate({
-      scrollTop: $(target).offset().top - 85
+      scrollTop: $(target).offset().top - 65
     },500);
   });
-  $(window).stellar();
+  
 })
 
 

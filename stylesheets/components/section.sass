@@ -23,14 +23,15 @@ section#start
             .slogen
                 font-size: 70px
                 font-weight: bold
-            button
-                margin-top:  20px
-                font-size: 25px
-                padding: 10px 20px
-                &:hover
-                    background-color: $color_orange
-                    border: 1px solid $color_orange
-            a
+            a.button 
+                button
+                    margin-top:  20px
+                    font-size: 25px
+                    padding: 10px 20px
+                    &:hover
+                        background-color: $color_orange
+                        border: 1px solid $color_orange
+            a.fas
                 display: block
                 font-size: 40px
                 color: rgba(248,248,248,0.5)
@@ -40,17 +41,13 @@ section#start
                 transform: translateX(-50%)
                 top: 380px
                 &:hover
-                    color: $color_white
+                    color: $color_orange
                     transition: 0.3s
 section#about
     color: $color_black
     text-align: center   
-    min-height: 692.1px
-    height: calc(91vh)
-    display: flex
-    align-items: center
+    padding: 80px 0px
     .container 
-        
         .line
             width: 35px
             height: 4px
@@ -119,9 +116,9 @@ section#about
 .bgimg
     height: 500px
     background: transparent
-    background-attachment: fixed
-    background-size: cover
+    background-size: 100% auto
     background-repeat: no-repeat
+    
     &:before
         content: ""
         background-color: rgba(0,0,0,0.4)
@@ -145,9 +142,15 @@ section#about
                 font-weight: bold
             p
                 font-size: 30px
+            button
+                margin-top:  10px
+                font-size: 25px
+                padding: 10px 20px
+                &:hover
+                    background-color: $color_orange
+                    border: 1px solid $color_orange
 
 section#newsNshop
-    z-index: -1
     .container
         margin: 60px 0px
         left: 50%
@@ -161,6 +164,163 @@ section#newsNshop
             background-color: $color_orange
             left: 50%
             transform: translateX(-50%)
+        p
+            margin-bottom: 50px
         .row
-            .card
-                background-color: $color_white
+            .side-left
+                padding: 0px 14px
+                margin-bottom: 28px
+                .news
+                    background-color: $color_ltGrey
+                    padding: 60px 35px
+                    &:before
+                        content: ""
+                        background-color: $color_ltOrange
+                        width: 100%
+                        position: absolute
+                        height: 40px
+                        bottom: 0px
+                        left: 0px
+                    h4
+                        font-size: 25px
+                    .news_content
+                        a.news_subtitle
+                            font-size: 20px
+                            color: $color_black
+                            cursor: pointer
+                            text-decoration: none
+                            font-weight: bold
+                            &:hover
+                                color: $color_grey
+                        p.news_date
+                            text-align: left
+                            font-size: 15px
+                            font-weight: bold
+                            margin-top: 10px
+                            margin-bottom: 0px
+                        p.news_text
+                            text-align: left
+                            text-overflow: ellipsis
+                            -webkit-line-clamp: 4
+                            -webkit-box-orient: vertical
+                            overflow: hidden
+                            display: -webkit-box
+                            font-size: 15px
+                            margin: 0
+                        .news_announcement
+                            p.store
+                                text-align: left
+                                font-size: 15px
+                                text-overflow: ellipsis
+                                -webkit-line-clamp: 10
+                                -webkit-box-orient: vertical
+                                overflow: hidden
+                                display: -webkit-box
+                            
+                    a.read_more
+                        text-decoration: none
+                        color: $color_black
+                        i
+                            margin-left: 5px
+                        &:hover
+                            color: $color_grey
+            .side-right
+                .row
+                    .col-lg-6
+                        padding: 0px 14px
+                        margin-bottom: 28px
+                    .shop
+                        margin-bottom: 28px
+                        .img
+                            height: 250px
+                            background-size: cover
+                            background-position: center 
+                            a
+                                padding: 10px 30px 
+                                background-color: $color_ltOrange
+                                font-weight: bold
+                                position: absolute
+                                left: 0
+                                bottom: -24.8px
+                                z-index: 1
+                                text-decoration: none
+                                color: $color_black
+                        .shop_contain
+                            background-color: $color_ltGrey
+                            color: $color_black
+                            a
+                                text-decoration: none
+                                color: $color_black
+                            .merch_name
+                                text-align: center
+                                font-weight: bold
+                                padding: 40px 0px 20px
+                            .merch_button
+                                display: flex
+                                justify-content: center
+                                a
+                                    width: 140px
+                                    font-size: 15px
+                                    padding: 10px 0px
+                                    text-align: center
+                                    &:hover
+                                        background-color: $color_black
+                                        color: $color_white
+                                a.price
+                                    border: 1px solid $color_black
+                                a.learnMore
+                                    border-bottom: 1px solid $color_black
+                                    border-right: 1px solid $color_black
+                                    border-top: 1px solid $color_black
+                            a.shop_link
+                                display: block
+                                text-align: center
+                                padding-bottom: 20px
+                                &:hover
+                                    color: $color_grey
+                    .app
+                        margin-bottom: 28px
+                        .app_contain
+                            padding: 60px 35px
+                            background-color: $color_ltGrey
+                            overflow: hidden
+                            min-height: 380px
+                            h4
+                                font-size: 25px 
+                                z-index: 1
+                                color: $color_black
+                            p
+                                font-size: 15px   
+                                text-align: left
+                                width: 80%   
+                                z-index: 1   
+                                color: $color_black 
+                            .img
+                                height: 350px
+                                width: 180px
+                                right: 0px
+                                bottom: 35px
+                                position: absolute
+                                img
+                                    position: absolute
+                                    bottom: 0px
+                                    -webkit-filter: drop-shadow(12px 12px 5px rgba(0, 0,0, 0.3))
+                                img.back
+                                    left: 70px
+                            .app_link
+                                margin-top: 40px
+                                display: inline-block
+                                .googl_play,.app_store
+                                    display: block
+                            &:before
+                                content: ""
+                                background-color: $color_ltOrange
+                                width: calc(100% - 35px)
+                                position: absolute
+                                height: 70px
+                                bottom: 0px
+                                right: 0px
+                    .comment
+                        .comment_content
+                            background-color: $color_grey                      
+                                

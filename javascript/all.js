@@ -26,7 +26,6 @@ $(document).ready(function(){
     else
       $(".myNavbar").addClass("navbar-top");
   });
-  // 
   $(document).on("click",'.fa-chevron-down',function(e){
     e.preventDefault();
     let target=$('.fas').attr('href');

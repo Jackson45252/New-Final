@@ -27,7 +27,7 @@ $(document).ready(function(){
       $(".myNavbar").addClass("navbar-top");
   });
   // 
-  $(document).on("click",'.fas',function(e){
+  $(document).on("click",'.fa-chevron-down',function(e){
     e.preventDefault();
     let target=$('.fas').attr('href');
     // console.log(alert(target));
@@ -35,6 +35,18 @@ $(document).ready(function(){
       scrollTop: $(target).offset().top - 65
     },500);
   });
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    items: 1,
+    nav: true,
+    navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right' ></i>"],
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    lazyLoad: true,
+  });
+  
   
 })
 

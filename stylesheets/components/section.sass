@@ -231,7 +231,7 @@ section#newsNshop
                         padding: 0px 14px
                         margin-bottom: 28px
                     .shop
-                        margin-bottom: 28px
+                        
                         .img
                             height: 250px
                             background-size: cover
@@ -321,7 +321,65 @@ section#newsNshop
                                 height: 70px
                                 bottom: 0px
                                 right: 0px
-                    .comment
-                        .comment_content
-                            background-color: $color_grey                      
+                    .gallery
+                        margin-bottom: 28px
+                        .owl-carousel.owl-theme
+                            .item
+                                height: 600px
+
+                                background-position: center center
+                                background-size: cover
+                            .owl-nav
+                                z-index: 2
+                                position: absolute
+                                
+                                bottom: 0px
+                                right: 0px
+                                .owl-prev,.owl-next
+                                    font-size: 40px
+                                    padding: 20px 40px !important
+                                    color: $color_white
+                                    
+                                    &:hover
+                                        background-color: $color_ltOrange
+                                        color: $color-black       
+                            &:before
+                                content: ""
+                                background-color: rgba(0,0,0,0.3)
+                                position: absolute
+                                left: 0
+                                right: 0
+                                bottom: 0
+                                top: 0
+                                z-index: 1
+                        .gallery_content
+                            position: absolute
+                            top: 50%
+                            transform: translateY(-50%)
+                            z-index: 1
+                            padding-left: 50px
+                            width: 60%
+                            h4,p
+                                text-align: left
+                                color: $color_white
+                            p
+                                font-size: 15px
+                                margin-bottom: 20px
+                            button
+                                
+                                font-size: 25px
+                                padding: 10px 20px
+                                &:hover
+                                    background-color: $color_orange
+                                    border: 1px solid $color_orange
+                            &:before
+                                content: ""
+                                background-color: $color_ltOrange
+                                height: 100%
+                                position: absolute
+                                width: 30px
+                                left: 0
+                                z-index: 1
+
+                             
                                 
